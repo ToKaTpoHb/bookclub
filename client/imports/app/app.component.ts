@@ -1,12 +1,16 @@
 import {Component} from '@angular/core';
+import {NavbarComponent} from './components/navbar/navbar.component'
 
-//noinspection TypeScriptCheckImport
-import template from './app.component.html';
 
 @Component({
   selector: 'app',
-  template,
-  styles:['app.component.css']
+  template: `
+    <div>
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+    </div>
+
+`
 })
 export class AppComponent {
   constructor() {
