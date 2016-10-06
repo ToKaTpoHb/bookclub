@@ -1,3 +1,14 @@
-/**
- * Created by tymur on 06.10.16.
- */
+import { Component } from "@angular/core";
+@Component (
+  {
+    selector : 'app-book-upload' ,
+    template : `
+<p>Upload page</p>
+`
+  }
+)
+
+export class BookUploadPageComponent
+{
+  
+}

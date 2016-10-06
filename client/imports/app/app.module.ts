@@ -10,9 +10,11 @@ import {AppComponent} from './app.component';
 import {DemoComponent} from './demo/demo.component';
 import {DemoDataService} from './demo/demo-data.service';
 import {BookService} from './services/index'
-import {IndexPageComponent, BookPageComponent}  from './components/pages/index';
+import {IndexPageComponent, BookPageComponent, BookDetailsPageComponent}  from './components/pages/index';
 import {NavbarComponent} from "./components/navbar/navbar.component";
 import {BooksComponent} from "./components/books/books.component";
+import { LazyLoadImageModule } from 'ng2-lazyload-image'
+import {BookDetailsComponent} from "./components/books/book.component";
 
 @NgModule({
     // Components, Pipes, Directive
@@ -22,7 +24,9 @@ import {BooksComponent} from "./components/books/books.component";
         IndexPageComponent,
         NavbarComponent,
         BookPageComponent,
-        BooksComponent
+        BooksComponent,
+        BookDetailsPageComponent,
+        BookDetailsComponent
     ],
     // Entry Components
     entryComponents: [
@@ -37,6 +41,7 @@ import {BooksComponent} from "./components/books/books.component";
     // Modules
     imports: [
         BrowserModule,
+        LazyLoadImageModule,
         routing
     ],
     // Main Component
