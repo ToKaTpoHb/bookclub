@@ -3,8 +3,7 @@ import {Component} from '@angular/core'
 
 @Component({
     selector: 'app-index-page',
-    template:
-        `
+    template: `
         <div class="jumbotron">
             <div class="container text-center">
                 <h1>BookClub</h1>
@@ -15,7 +14,6 @@ import {Component} from '@angular/core'
         `
 })
 
-export class IndexPageComponent
-{
+export class IndexPageComponent {
 
 }

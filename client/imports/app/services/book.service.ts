@@ -12,7 +12,7 @@ export class BookService {
         this.data = BookCollection.find({});
     }
 
-    public getData() : ObservableCursor<Book> {
+    public getAllBooks() : ObservableCursor<Book> {
         return this.data;
     }
 }

@@ -9,8 +9,10 @@ import {
 import {AppComponent} from './app.component';
 import {DemoComponent} from './demo/demo.component';
 import {DemoDataService} from './demo/demo-data.service';
-import { IndexPageComponent }  from './components/pages/index';
+import {BookService} from './services/index'
+import {IndexPageComponent, BookPageComponent}  from './components/pages/index';
 import {NavbarComponent} from "./components/navbar/navbar.component";
+import {BooksComponent} from "./components/books/books.component";
 
 @NgModule({
     // Components, Pipes, Directive
@@ -18,7 +20,9 @@ import {NavbarComponent} from "./components/navbar/navbar.component";
         AppComponent,
         DemoComponent,
         IndexPageComponent,
-        NavbarComponent
+        NavbarComponent,
+        BookPageComponent,
+        BooksComponent
     ],
     // Entry Components
     entryComponents: [
@@ -27,6 +31,7 @@ import {NavbarComponent} from "./components/navbar/navbar.component";
     // Providers
     providers: [
         DemoDataService,
+        BookService,
         appRoutingProviders
     ],
     // Modules
