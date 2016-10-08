@@ -33,3 +33,23 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
+.input-valid  {
+    border-right: 5px solid #42A948; /* green */
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.input-error  {
+    border-right: 5px solid #a94442; /* red */
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
+}

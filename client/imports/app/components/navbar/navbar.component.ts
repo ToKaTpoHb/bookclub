@@ -24,7 +24,7 @@ import {Observable} from "rxjs";
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a [routerLink]="['/books']">Все книги</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a [routerLink]="['/books/upload']">Загрузка книги</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

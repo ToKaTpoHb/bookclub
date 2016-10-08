@@ -15,6 +15,8 @@ import {NavbarComponent} from "./components/navbar/navbar.component";
 import {BooksComponent} from "./components/books/books.component";
 import { LazyLoadImageModule } from 'ng2-lazyload-image'
 import {BookDetailsComponent} from "./components/books/book.component";
+import { BookUploadPageComponent } from "./components/pages/book.upload.page.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     // Components, Pipes, Directive
@@ -26,7 +28,8 @@ import {BookDetailsComponent} from "./components/books/book.component";
         BookPageComponent,
         BooksComponent,
         BookDetailsPageComponent,
-        BookDetailsComponent
+        BookDetailsComponent,
+        BookUploadPageComponent
     ],
     // Entry Components
     entryComponents: [
@@ -42,6 +45,8 @@ import {BookDetailsComponent} from "./components/books/book.component";
     imports: [
         BrowserModule,
         LazyLoadImageModule,
+        FormsModule,
+        ReactiveFormsModule,
         routing
     ],
     // Main Component
