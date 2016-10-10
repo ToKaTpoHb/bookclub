@@ -35,8 +35,7 @@ export class BookService
   
   public addBook ( book : Book, cb )
   {
-    //noinspection TypeScriptUnresolvedFunction
     BookCollection.insert(book)
-      .then(cb)
+    BookCollection.find().observe({added(doc){cb(doc)}})
   }
 }

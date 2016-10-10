@@ -4,6 +4,7 @@ import { UploadFS } from "meteor/jalik:ufs";
 import { uploadCover } from "../../../../../both/methods/covers.methods";
 import { uploadBookFile } from "../../../../../both/methods/bookfiles.methods";
 import { BookService } from "../../services/book.service";
+import { Router } from "@angular/router";
 
 @Component (
   {
@@ -107,7 +108,8 @@ export class BookUploadPageComponent
   bookCoverToUpload : File
   
   constructor (
-    private bookService : BookService
+    private bookService : BookService,
+    private router: Router
   )
   {}
   
@@ -193,21 +195,19 @@ export class BookUploadPageComponent
     this.uploadBookCover (
       ( result )=>
       {
-        console.log ( result )
         this.bookToAdd.cover = result.path
         
         this.uploadBookFile (
           ( result )=>
           {
-            console.log ( result )
-            
             this.bookToAdd.file = result.path
             
-            //noinspection TypeScriptUnresolvedFunction
             this.bookService.addBook (
-              this.bookToAdd , ( err , res ) =>
-              {
-                console.log ( err )
+              this.bookToAdd, (doc)=>{
+                if(doc.cover === this.bookToAdd.cover)
+                {
+                  this.router.navigate(['/books','view', doc._id])
+                }
               }
             )
             

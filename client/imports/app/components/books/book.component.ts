@@ -48,7 +48,7 @@ export class BookDetailsComponent
   @Input () book : Book
             defaultImage : string = 'img/loading.png'
   
-  constructor () {console.log ( this.book )}
+  constructor () {}
   
   bookExists () : boolean
   {
