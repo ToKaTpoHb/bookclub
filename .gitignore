@@ -3,4 +3,5 @@ node_modules/
 npm-debug.log
 typings/
 .idea/
-!typings/jalik-ufs.d.ts
+!typings/jalik-ufs.d.ts.deploy/
+.deploy/
